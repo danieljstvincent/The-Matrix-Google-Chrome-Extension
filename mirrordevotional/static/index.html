@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Affirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #affirmation {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pray Journal</h1>
+        <form id="journalForm">
+            <label for="journalText">Journal Entry:</label><br>
+            <textarea id="journalText" name="journalText" rows="10" cols="50"></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="affirmation"></div>
+    </div>
+
+    <script>
+        document.getElementById('journalForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const text = document.getElementById('journalText').value;
+
+            const response = await fetch('http://127.0.0.1:8000/journal', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ text })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                document.getElementById('affirmation').innerText = data.affirmation;
+            } else {
+                const errorData = await response.json();
+                document.getElementById('affirmation').innerText = `Error: ${errorData.detail}`;
+            }
+        });
+    </script>
+</body>
+</html>
