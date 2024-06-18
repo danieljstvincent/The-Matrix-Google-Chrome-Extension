@@ -43,7 +43,7 @@ async def create_affirmation(entry: JournalEntry):
             model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": f"Read the following journal entry and generate a bible based devational based on it: {entry.text}"}
+                {"role": "user", "content": f"Read the following journal entry and generate a positive affirmation  with a positve quote at the start: {entry.text}"}
             ]
         )
         affirmation = response.choices[0].message['content'].strip()
