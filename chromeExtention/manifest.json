@@ -1,17 +1,22 @@
 {
   "manifest_version": 3,
-  "name": "My First Extension",
-  "version": "1.0",
-  "description": "This is my DBZ app",
+  "name": "Welcome - New Tab",
+  "description": "Get welcomed with a beautiful photo and the time on each new tab.",
+  "version": "1.0.0",
   "icons": {
-    "128": "icon.png"
+    "128": "images/light_bulb_mascot_128x128.png",
+    "48": "images/light_bulb_mascot_48x48.png",
+    "38": "images/light_bulb_mascot_38x38.png",
+    "19": "images/light_bulb_mascot_19x19.png",
+    "16": "images/light_bulb_mascot_16x16.png"
   },
   "action": {
     "default_icon": {
-      "32": "icon.png"
-    }
-   },
-   "background": {
-      "service_worker": "background.js"
-   }
+      "38": "images/light_bulb_mascot_38x38.png"
+    },
+    "default_title": "Open New Tab"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
   }
+}
