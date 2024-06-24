@@ -1,21 +1,10 @@
-const menuItemMap = {
-SELECTION: "selection-click"
-PAGE: "page-click",
-}:
-
-
 chrome.runtime.onInstalled.addListener(function () {
-    chrome.contextMenus.create({
-        id: "my-id",
-        title: "New Context Menu Item",
-        contexts: ["page"],
+    // Listen for clicks to the extension icon
+    chrome.action.onClicked.addListener(function () {
+      // When the icon is clicked, create a new tab pointing to the index page
+      chrome.tabs.create({
+        url: chrome.runtime.getURL("/index.html"),
+      });
     });
-
- chrome.contextMenus.create({
-    id: menuItemMap.PAGE,
-    title: "New Context Menu Item - Page",
-    contexts: ["page"],
-    });
-});
-
-//hello :)
+  });
+  
