@@ -1,0 +1,31 @@
+#quote-container {
+    position: relative;
+    z-index: 2;
+    font-size: 24px;
+    color: #0F0;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #0F0;
+    animation: glow 1s ease-in-out infinite alternate;
+    background: #000; /* Make sure the background is transparent */
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px #0f0; }
+    to { box-shadow: 0 0 20px #0f0; }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+#canvas {
+    background: #111;
+}

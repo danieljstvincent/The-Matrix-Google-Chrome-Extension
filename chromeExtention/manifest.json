@@ -4,17 +4,11 @@
   "description": "Get welcomed with a beautiful photo and the time on each new tab.",
   "version": "1.0.0",
   "icons": {
-    "16": "images/light_bulb_mascot_16x16.png",
-    "32": "images/light_bulb_mascot_38x38.png",
-    "48": "light_bulb_mascot_48x48.png",
-    "128": "images/light_bulb_mascot_128x128.png"
+    "128": "images/icon.png"
   },
   "action": {
     "default_icon": {
-      "16": "images/light_bulb_mascot_16x16.png",
-      "32": "images/light_bulb_mascot_38x83",
-      "48": "images/light_bulb_mascot_48x48.png",
-      "128": "images/light_bulb_mascot_128x128.png"
+      "32": "images/icon.png"
     },
     "default_title": "Open New Tab"
   },
