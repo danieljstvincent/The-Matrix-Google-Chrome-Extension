@@ -1,6 +1,6 @@
 body, html {
     height: 100%;
-    margin: 0;
+    margin: 100;
     background: black; /* Set the entire page background to black */
     color: #0F0;
     font-family: 'Courier New', monospace;
@@ -30,7 +30,20 @@ body, html {
     text-align: center;
     border: 1px solid #0F0;
     animation: glow 1s ease-in-out infinite alternate;
-    background: transparent; /* Make sure the background is transparent */
+    background: #000; /* Make sure the background is transparent */
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px #0f0; }
+    to { box-shadow: 0 0 20px #0f0; }
+}
+
+.rain-drop {
+    position: absolute;
+    top: -100%;
+    color: #0F0;
+    font-size: 14px;
+    animation: fall linear infinite;
 }
 
 @keyframes glow {
@@ -51,3 +64,5 @@ body, html {
         transform: translateY(100vh);
     }
 }
+
+
