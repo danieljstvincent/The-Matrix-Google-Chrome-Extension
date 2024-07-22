@@ -1,4 +1,4 @@
-# Matrix Quotes Chrome Extension
+# Matrix-Themed Google Chrome Extension Quotes Generator
 
 ![Converted_Matrix_Gif_Image_Final_Cut_](https://github.com/user-attachments/assets/4ae9da6a-83ad-432b-b525-2b747760a03b)
 
@@ -14,4 +14,4 @@ Matrix Quotes is a Google Chrome extension that generates interesting and though
 ## Installation
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/danieljstvincent/mirrordevotional
+   git clone https://github.com/danieljstvincent/The-Matrix-Google-Chrome-Extension
