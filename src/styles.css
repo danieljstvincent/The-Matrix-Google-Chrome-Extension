@@ -1,7 +1,7 @@
 body, html {
     height: 100%;
-    margin: 100;
-    background: black; /* Set the entire page background to black */
+    margin: 0;
+    background: black;
     color: #0F0;
     font-family: 'Courier New', monospace;
     overflow: hidden;
@@ -9,9 +9,10 @@ body, html {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: relative; /* Ensure positioning context for z-index */
+    position: relative;
 }
 
+/* Container for Matrix Rain */
 #matrix-rain {
     position: absolute;
     top: 0;
@@ -19,8 +20,10 @@ body, html {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    z-index: 1; /* Make sure it's behind the quote */
 }
 
+/* Container for the quote */
 #quote-container {
     position: relative;
     z-index: 2;
@@ -30,14 +33,16 @@ body, html {
     text-align: center;
     border: 1px solid #0F0;
     animation: glow 1s ease-in-out infinite alternate;
-    background: #000; /* Make sure the background is transparent */
+    background: black;
 }
 
+/* Glow animation */
 @keyframes glow {
     from { box-shadow: 0 0 10px #0f0; }
     to { box-shadow: 0 0 20px #0f0; }
 }
 
+/* Optional - only used if keeping non-canvas rain drops */
 .rain-drop {
     position: absolute;
     top: -100%;
@@ -46,23 +51,20 @@ body, html {
     animation: fall linear infinite;
 }
 
-@keyframes glow {
-    from { box-shadow: 0 0 10px #0f0; }
-    to { box-shadow: 0 0 20px #0f0; }
-}
-
-.rain-drop {
-    position: absolute;
-    top: -100%;
-    color: #0F0;
-    font-size: 14px;
-    animation: fall linear infinite;
-}
-
+/* Optional - only used with .rain-drop */
 @keyframes fall {
     to {
         transform: translateY(100vh);
     }
 }
 
-
+/* If using a <canvas> for rain, include this */
+#matrix-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
