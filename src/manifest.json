@@ -2,8 +2,7 @@
     "manifest_version": 3,
     "name": "Matrix Quotes Generator",
     "description": "Displays a famous quote in the middle of the page with a Matrix-themed background on each new tab.",
-    "version": "1.0",
-    "permissions": ["storage"],
+    "version": "1.0",  
     "chrome_url_overrides": {
         "newtab": "newtab.html"
     },
