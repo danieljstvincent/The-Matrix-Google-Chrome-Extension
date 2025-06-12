@@ -4,7 +4,7 @@
 
 
 ## Overview
-Matrix Quotes is a Google Chrome extension that generates exciting and thought-provoking quotes in a Matrix-inspired style. Whenever you open a new tab, you’ll be greeted with a new quote displayed in the iconic green, cascading text style from the Matrix movie series.
+Matrix Quotes is a Google Chrome extension that generates exciting and thought-provoking quotes in a Matrix-inspired style. Whenever you open a new tab, you’ll be greeted with a new quote displayed in the iconic green, cascading text style from the Matrix movie series. Click this [link](https://chromewebstore.google.com/detail/matrix-quotes-generator/hpnjhafcedokjfoijigeddldbdghgpmn?authuser=0&hl=en) to download the google chrome extention and try it for yourself.
 
 ## Features
 - **Random Quotes:** Get an interesting quote every time you open a new tab.
